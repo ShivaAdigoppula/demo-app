@@ -7,3 +7,4 @@ Small FastAPI service used to demonstrate CI (Jenkins, SonarQube, Trivy) and Git
 
 Run locally: `uvicorn app.main:app --reload`
 Test: `pytest -v`
+Pipeline: Jenkins (tests, SonarQube gate, Trivy gate, ECR push, GitOps update).
