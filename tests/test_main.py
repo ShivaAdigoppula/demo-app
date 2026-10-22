@@ -18,3 +18,8 @@ def test_health_returns_ok():
     response = client.get("/health")
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
+
+def test_hello_greets_by_name():
+    response = client.get("/hello/shiva")
+    assert response.status_code == 200
+    assert response.json()["hello"] == "shiva"

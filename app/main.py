@@ -21,3 +21,8 @@ def root():
 def health():
     """Health endpoint: Kubernetes calls this to decide if the pod is alive and ready."""
     return {"status": "ok"}
+
+@app.get("/hello/{name}")
+def hello(name: str):
+    """New in this release: a personal greeting."""
+    return {"hello": name, "version": APP_VERSION}
